@@ -12,7 +12,7 @@ def fix_phone_num(phone_num_to_fix):
             raise ValueError(f"phone numbers of length 11 must begin with a 1, got \"{phone_num_to_fix}\"")
         # Strip off the country code "1" from the beginning.
         # Resulting string should be of length 10 to work with formatting code below.
-        phone_num_to_fix = phone_num_to_fix[1:]
+        phone_num_to_fix = phone_num_to_fix[0:]
 
     # given "5125558823". Split the parts, then recombine and return
     area_code = phone_num_to_fix[0:3]  # 512 (first three digits)
