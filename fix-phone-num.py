@@ -36,3 +36,8 @@ def test_long_num_error():
 def test_non_digit_error():
   with pytest.raises(ValueError):
     fix_phone_num("012345678a")
+def fix_phone_num(phone):
+    if phone.startswith("1") and len(phone) == 11:
+        phone = phone[1:]
+    return f"({phone[0:3]}) {phone[3:6]} {phone[6:]}"
+
