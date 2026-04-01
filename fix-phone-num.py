@@ -3,7 +3,7 @@ import pytest
 def fix_phone_num(phone_num_to_fix):
     if len(phone_num_to_fix) == 11:
       if phone_num_to_fix[0] != '1':
-        raise valueError(f"Country code must be 1; got \"{phone_num_to_fix[0]}\"")
+        raise ValueError(f"Country code must be 1; got \"{phone_num_to_fix[0]}\"")
       phone_num_to_fix = phone_num_to_fix[1:]
         
   
