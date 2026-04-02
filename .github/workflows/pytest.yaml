@@ -2,6 +2,7 @@ name: Pytest
 
 on:
   push:
+    branches: [ "main" ]
   pull_request:
 
 jobs:
@@ -17,9 +18,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run pytest
+      - name: Install dependencies
         run: |
-          pytest fix-phone-num.py
+          pip install pytest
 
       - name: Run tests
-        run: pytest
+        run: |
+          pytest fix-phone-num.py
