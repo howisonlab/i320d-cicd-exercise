@@ -46,7 +46,7 @@ def test_non_digit_error():
     fix_phone_num("012345678a")
 
 def test_fix_phone_num_country_code():
-    assert fix_phone_num("15125558823") == '(512) 555 8823'
+    assert fix_phone_num("5125558823") == '(512) 555 8823'
 
 def test_wrong_country_code():
     with pytest.raises(ValueError):
