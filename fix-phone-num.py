@@ -25,13 +25,13 @@ def fix_phone_num(phone_num_to_fix):
 
 
 def test_fix_phone_num():
-    assert fix_phone_num("(512) 555 8823") == '(512) 555 8823'
+    assert fix_phone_num("5125558823") == '5125558823'
 
 def test_fix_phone_num2():
-    assert fix_phone_num("(555) 442 9876") == '(555) 442 9876'
+    assert fix_phone_num("5554429876") == '5554429876'
 
 def test_fix_phone_num3():
-    assert fix_phone_num("(321) 654 3333") == '(321) 654 3333'
+    assert fix_phone_num("3216543333") == '3216543333'
 
 def test_short_num_error():
   with pytest.raises(ValueError):
@@ -46,7 +46,7 @@ def test_non_digit_error():
     fix_phone_num("012345678a")
 
 def test_fix_phone_num_country_code():
-    assert fix_phone_num("(512) 555 8823") == '(512) 555 8823'
+    assert fix_phone_num("15125558823") == '(512) 555 8823'
 
 def test_wrong_country_code():
     with pytest.raises(ValueError):
