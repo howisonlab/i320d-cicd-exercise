@@ -11,8 +11,7 @@ def fix_phone_num(phone_num_to_fix):
     three_part = phone_num_to_fix[3:6]  # 555 (next three digits)
     four_part = phone_num_to_fix[6:]  # # 8823 (last four digits)
 
-    fixed_num = "(" + area_code + ")" + " " + three_part + " " + four_part
-
+    fixed_num = f"({area_code}) {three_part}-{four_part}"
     return fixed_num
 
 
